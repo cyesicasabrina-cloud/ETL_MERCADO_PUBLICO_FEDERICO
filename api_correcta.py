@@ -1,7 +1,7 @@
 import requests
 import os
 
-
+ 
 def solicitar_licitaciones_correcto(tipo_licitacion="LE", estado="activas", ticket=None):
     """
     Solicita licitaciones usando la estructura correcta de la API
