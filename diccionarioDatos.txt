@@ -1,0 +1,14 @@
+Licitaciones/Listado/Licitacion/FechaCierre
+Licitaciones/Listado/Licitacion/Descripcion 
+Licitaciones/Listado/Licitacion/Estado
+Licitaciones/Listado/Licitacion/Comprador/NombreOrganismo
+Licitaciones/Listado/Licitacion/Comprador/NombreUnidad
+Licitaciones/Listado/Licitacion/Comprador/ComunaUnidad
+Licitaciones/Listado/Licitacion/Comprador/RegionUnidad
+Licitaciones/Listado/Licitacion/Comprador/NombreUsuario
+Licitaciones/Listado/Licitacion/Comprador/CargoUsuario
+Licitaciones/Listado/Licitacion/CodigoTipo(1=publico) 
+Licitaciones/Listado/Licitacion/TipoConvocatoria (1=publico)
+Licitaciones/Listado/Licitacion/MontoEstimado
+Licitaciones/Listado/Licitacion/Modalidad
+Licitaciones/Listado/Licitacion/EmailResponsablePago

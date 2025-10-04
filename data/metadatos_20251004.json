@@ -1,0 +1,27 @@
+{
+  "fecha_generacion": "2025-10-04T05:38:58.624437",
+  "registros_totales": 4374,
+  "campos_totales": 17,
+  "campos_diccionario": 14,
+  "archivos_generados": [
+    "data/clean/licitaciones_completo_20251004.csv",
+    "data/clean/licitaciones_diccionario_20251004.csv"
+  ],
+  "campos_diccionario_disponibles": [
+    "FechaCierre",
+    "Descripcion",
+    "Estado",
+    "Comprador.NombreOrganismo",
+    "Comprador.NombreUnidad",
+    "Comprador.ComunaUnidad",
+    "Comprador.RegionUnidad",
+    "Comprador.NombreUsuario",
+    "Comprador.CargoUsuario",
+    "CodigoTipo",
+    "TipoConvocatoria",
+    "MontoEstimado",
+    "Modalidad",
+    "EmailResponsablePago"
+  ],
+  "fuente": "API Mercado Público + Enriquecimiento de datos"
+}
