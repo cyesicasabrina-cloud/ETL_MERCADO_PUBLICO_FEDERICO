@@ -1,3 +1,7 @@
-pandas
-requests
-openpyxl ; extra opcional para exportar XLSX
+pandas>=1.5
+requests>=2.28
+openpyxl>=3.0
+
+pandas>=1.5
+requests>=2.28
+openpyxl>=3.0
