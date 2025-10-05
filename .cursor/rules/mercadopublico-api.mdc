@@ -1,0 +1,63 @@
+---
+alwaysApply: true
+---
+# Rule: API Mercado Público - Python Utilities
+# Scope: project-wide
+# Description: This rule helps Cursor understand and assist in scripts that interact with the ChileCompra API.
+
+## Intent
+The goal of this rule is to assist the developer in:
+- Downloading and normalizing public data from ChileCompra’s API.
+- Filtering technology-related tenders.
+- Managing CSV and XLSX outputs in a reproducible structure.
+
+## Code Conventions
+- Always use Python 3.11+.
+- Use `requests` for HTTP calls and `pandas` for data manipulation.
+- Save data under `./data/raw` and `./data/clean`.
+- File naming format: `licitaciones_YYYYMMDD.csv`, `ordenes_YYYYMMDD.csv`.
+
+## Environment
+- Requires environment variable: `MP_TICKET` (API key).
+- Optional dependencies: `openpyxl`.
+
+## CLI Entry Points
+- `licitaciones.py --fecha ddmmaaaa`
+- `licitaciones.py --estado activas`
+- `ordenes_compra.py --fecha ddmmaaaa`
+- `filtrar_tecnologia.py --src path/to/csv`
+
+## Rules for Responses
+- When asked for code, prefer minimal, robust, and executable Python examples.
+- Always include examples that log API responses and write output CSVs.
+- When suggesting regex for tech filters, use Python raw strings (`r"..."`).
+- Avoid changing `sep` or `encoding` unless explicitly asked.
+
+## Error Handling
+- Retry failed requests (status 5xx) with exponential backoff.
+- Handle empty results (`Cantidad = 0`) gracefully.
+- Print clear user messages for missing tickets or invalid parameters.
+
+## Security Practices
+- Never hardcode the ticket in public code.
+- Always reference: `TICKET = os.getenv("MP_TICKET", "")`.
+- Use HTTPS endpoints exclusively.
+
+## Example Snippet
+```python
+import requests, os, pandas as pd
+TICKET = os.getenv("MP_TICKET", "")
+url = f"https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json?estado=activas&ticket={TICKET}"
+data = requests.get(url).json()
+df = pd.json_normalize(data["Listado"])
+df.to_csv("data/licitaciones_activas.csv", encoding="utf-8-sig", sep=";")
+```
+
+## Style
+- Use snake_case for functions.
+- Prefer explicit over implicit imports.
+- Log progress messages with timestamps.
+
+## References
+Based on “Guía Técnica para el Uso de la API de Mercado Público de Chile (ChileCompra, 2024)”.
+Folder Documentacion - files just with  .pdf extension no consider .pdf_old extension files
