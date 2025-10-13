@@ -47,9 +47,8 @@ pip install -r requirements.txt
 ## 🧩 Uso rápido
 
 - **Desde la raíz del repositorio:¨**
-
- - `python .\licitaciones.py       # Descarga y guarda CSV en data/ `
-- `python .\filtrar_tecnologia.py # Filtra y crea tecnologia_YYYYMMDD.csv`
+   - `python .\licitaciones.py       # Descarga y guarda CSV en data/ `
+   - `python .\filtrar_tecnologia.py # Filtra y crea tecnologia_YYYYMMDD.csv`
 
 
 Algunas versiones de licitaciones.py admiten argumentos como:
