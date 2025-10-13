@@ -42,3 +42,86 @@ Instalación rápida (PowerShell):
 
 ```powershell
 pip install -r requirements.txt
+🧩 Uso rápido
+
+Desde la raíz del repositorio:
+
+python .\licitaciones.py       # Descarga y guarda CSV en data/
+python .\filtrar_tecnologia.py # Filtra y crea tecnologia_YYYYMMDD.csv
+
+
+Algunas versiones de licitaciones.py admiten argumentos como:
+
+python .\licitaciones.py --fecha 20251012 --estado 7
+
+
+📘 Revisa el script para conocer parámetros disponibles.
+
+📐 Convenciones del proyecto
+
+Encoding CSV: utf-8-sig (para compatibilidad con Excel)
+
+Nombres estándar:
+
+licitaciones_{YYYYMMDD}.csv
+
+tecnologia_{YYYYMMDD}.csv
+
+Filtrado: filtrar_tecnologia.py busca coincidencias en columnas definidas en TEXT_COLS; si no hay coincidencia directa, concatena texto de toda la fila.
+
+Ordenamiento: se priorizan columnas datetime (FechaCierre, FechaPublicacion) al exportar.
+
+🔐 Configuración de credenciales
+
+Las claves o tickets de la API deben almacenarse en variables de entorno.
+
+Ejemplo de uso recomendado:
+
+import os
+TICKET = os.getenv("MP_TICKET")
+
+
+Configura tu entorno (PowerShell):
+
+setx MP_TICKET "tu_clave_aquí"
+
+🧪 Tests
+
+Aún no hay tests automatizados.
+Si agregas alguno, utiliza pytest y crea una carpeta tests/:
+
+tests/
+ ├─ test_filtrar_tecnologia.py
+ └─ test_match_row.py
+
+🤖 Notas para desarrolladores / agentes AI
+
+Identifica cuál script (licitaciones.py o tecnologia.py) es la fuente principal antes de refactorizar.
+
+Las palabras clave se definen en KEYWORDS dentro de filtrar_tecnologia.py.
+
+Mantén el encoding utf-8-sig para evitar conflictos con Excel.
+
+Considera unificar variantes y agregar tipado estático con mypy.
+
+💡 Contribuciones
+
+Haz un fork del repositorio.
+
+Crea una rama para tu mejora:
+
+git checkout -b feature/nueva-funcion
+
+
+Envía un Pull Request con una descripción clara.
+
+Si modificas la lógica de filtrado o parseo, incluye un test que cubra el caso.
+
+🧭 Próximos pasos sugeridos
+
+Unificar versiones de licitaciones.py y tecnologia.py.
+
+Añadir requirements.txt con versiones fijas.
+
+Crear tests mínimos para match_row() y funciones auxiliares.
+
