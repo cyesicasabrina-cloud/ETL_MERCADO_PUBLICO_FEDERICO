@@ -51,22 +51,22 @@ pip install -r requirements.txt
    - `python .\filtrar_tecnologia.py # Filtra y crea tecnologia_YYYYMMDD.csv`
 
 
-Algunas versiones de licitaciones.py admiten argumentos como:
+## Algunas versiones de licitaciones.py admiten argumentos como:
 
-python .\licitaciones.py --fecha 20251012 --estado 7
+   -`python .\licitaciones.py --fecha 20251012 --estado 7`
 
 
-📘 Revisa el script para conocer parámetros disponibles.
+## 📘 Revisa el script para conocer parámetros disponibles.
 
-📐 Convenciones del proyecto
+## 📐 Convenciones del proyecto
 
-Encoding CSV: utf-8-sig (para compatibilidad con Excel)
+   -`Encoding CSV: utf-8-sig (para compatibilidad con Excel)
 
-Nombres estándar:
+## Nombres estándar:
 
-licitaciones_{YYYYMMDD}.csv
+  -`licitaciones_{YYYYMMDD}.csv`
 
-tecnologia_{YYYYMMDD}.csv
+  -`tecnologia_{YYYYMMDD}.csv`
 
 Filtrado: filtrar_tecnologia.py busca coincidencias en columnas definidas en TEXT_COLS; si no hay coincidencia directa, concatena texto de toda la fila.
 
