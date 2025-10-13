@@ -58,19 +58,20 @@ pip install -r requirements.txt
 
 ## 📘 Revisa el script para conocer parámetros disponibles.
 
-## 📐 Convenciones del proyecto
+   📐 Convenciones del proyecto
 
    -`Encoding CSV: utf-8-sig (para compatibilidad con Excel)
 
 ## Nombres estándar:
 
-  -`licitaciones_{YYYYMMDD}.csv`
+```powershell
+   -`licitaciones_{YYYYMMDD}.csv`
+   -`tecnologia_{YYYYMMDD}.csv`
+```
 
-  -`tecnologia_{YYYYMMDD}.csv`
+## Filtrado: filtrar_tecnologia.py busca coincidencias en columnas definidas en TEXT_COLS; si no hay coincidencia directa, concatena texto de toda la fila.
 
-Filtrado: filtrar_tecnologia.py busca coincidencias en columnas definidas en TEXT_COLS; si no hay coincidencia directa, concatena texto de toda la fila.
-
-Ordenamiento: se priorizan columnas datetime (FechaCierre, FechaPublicacion) al exportar.
+  Ordenamiento: se priorizan columnas datetime (FechaCierre, FechaPublicacion) al exportar.
 
 🔐 Configuración de credenciales
 
