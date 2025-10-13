@@ -42,6 +42,8 @@ Instalación rápida (PowerShell):
 
 ```powershell
 pip install -r requirements.txt
+```
+
 🧩 Uso rápido
 
 Desde la raíz del repositorio:
